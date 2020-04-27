@@ -1,0 +1,6 @@
+//jhf5my -- John Fishbein -- Tuesday Februrary 22 2019
+//postlab1.question.txt
+
+1. What is the difference between "->" and just a "."?
+2. What does the * operator actually do?
+3. Why is the "new" keyword used for the list but nothing else?

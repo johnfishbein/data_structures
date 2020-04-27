@@ -1,0 +1,5 @@
+//jhf5my -- John Fishbein -- Tuesday February 5 2019
+//difficulties.txt
+
+
+In this lab, I struggled a lot with reading in and analyzing the input.  It took me a while to understand the syntax of reading input in c++ and I still don't get it 100%. I spent a while on google, looking up c++ documentation and eventually I figured it out.  The theory behind implementing the stack wasn't too tricky for me to understand, but the syntax took me a while to get. 

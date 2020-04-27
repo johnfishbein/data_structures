@@ -1,0 +1,102 @@
+C01D 000  jmp	go to start
+0005 001  dw	MAX	
+0000 002  dw	i
+0000 003  dw	j
+0000 004  dw	zero
+0001 005  dw	one
+0000 006  dw	A[j]
+0000 007  dw	A[j-1]
+3000 008  insr  load
+4000 009  insr	store
+005D 00A  dw	Array base
+0000 00B  dw 	temp
+0000 00C
+0000 00D
+0000 00E
+0000 00F	THIS IS READING IN ARRAY
+3002 010	load i
+6001 011	subtract max
+D01D 012	if i-max = 0 (if i == max) skip loop
+3009 013	load store
+500A 014	add array base
+5002 015	add i
+4018 016	store instr at 018
+1000 017	take in input
+0000 018	store at a[i]
+3002 019	load i
+5005 01A	increment
+4002 01B	store i
+C010 01C	repeat loop
+B000 01D	SKIP TO HERE WHEN ARRAY IS HARD CODED IN
+B000 01E	
+3004 01F	load 0
+4002 020	make i 0
+B000 021	THIS IS BUBBLE SORT
+C026 022	jump to 026
+3002 023	load i
+5005 024	add 1	i++;
+4002 025	store i
+3002 026	load i
+6001 027	subtract max
+D058 028	jump to end if i loop is over if i==max
+3001 029   	load max
+6005 02A	subtract 1
+4003 02B	store in j
+B000 02C	THIS IS J LOOP
+3003 02D	load j
+6002 02E	subtract i
+D023 02F	jump if zero to beginning of i loop
+3008 030	load load
+500A 031	add array base
+5003 032	add j
+4034 033	store command in 034
+0000 034	run load command to get a[j] in accum
+4006 035	store a[j] in 006
+3008 036	load load 
+500A 037	add array base
+5003 038	add j
+6005 039	subtract 1
+403B 03A	store command in 03B
+0000 03B	run load command to get a[j-1] in accum
+4007 03C	store a[j-1] in 007
+B000 03D	now a[j] and a[j-1] are stored as variables	
+3006 03E	load a[j] 
+6007 03F	subtract a[j-1]
+E045 040	if a[j] - a[j-1] < 0 jump to 045
+3003 041	load j
+6005 042	subtract 1 j--;
+4003 043	store j
+C02C 044	loop
+3006 045	load a[j]		this is where swap occurs
+400B 046	store in temp 		temp = a[j]
+3009 047	load store instr
+500A 048	add array base
+5003 049	add j
+404C 04A	store instr in 04c
+3007 04B	load a[j-1] 
+0000 04C	execute store instr	a[j] = a[j-1]
+3009 04D	load store instr
+500A 04E	add array base
+5003 04F	add j
+6005 050	subtract 1
+4053 051	store instr in 053
+300B 052	load temp val
+0000 053	store temp value as a[j-1]	a[j-1] = temp
+3003 054	load j	
+6005 055	subtract 1 j--
+4003 056	store in j
+C02C 057	loop
+0000 058	halt
+0000 059
+0000 05A
+0000 05B
+0000 05C
+0007 05D	array base address a[0]
+0005 05E
+0006 05F
+0003 060	
+0009 061
+0000 062
+0000 063
+0000 064
+0000 065

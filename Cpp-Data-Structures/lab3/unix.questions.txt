@@ -1,0 +1,6 @@
+//jhf5my -- John Fishbein -- Monday February 4 2019
+//unix.questions.txt
+
+1. I still don't fully understand the function of #ifndef #endif in the header file
+2. How do you convert from string to int in c++
+3. Is there a good place to go to look up all of the useful unix commands?

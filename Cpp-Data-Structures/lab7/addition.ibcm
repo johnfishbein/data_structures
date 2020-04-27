@@ -1,0 +1,26 @@
+C006    000		skip to 6
+0000	001  var1
+0000	002  var2
+0000	003  var3
+0000	004  sum
+0000	005
+1000	006		read in var1
+4001	007		store at mem 001
+1000	008		read in var2
+4002	009		store at mem 002
+1000	00A		read in var 3
+4003	00B		store at mem 003
+3001	00C		loads var1
+5002	00D		adds var1 + var2
+5003	00E		adds var1+var2+vars
+4004	00F		stores at mem 004
+B000	010		does nothing
+D013	011		if acc = 0 jump to mem 013
+C006	012		jump back to 6
+3001	013		
+1800	014		print var1
+3002	015		
+1800	016		print var2
+3003	017		
+1800	018		print var3
+0000	019

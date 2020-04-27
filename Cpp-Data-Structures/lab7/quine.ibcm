@@ -1,0 +1,23 @@
+C005 000	jmp
+3000 001 	load instr
+0000 002 	
+0016 003	size of file
+0001 004	one		 
+3003 005	load size	 
+6016 006	subtract i
+D011 007	jump to exit if 0
+3001 008	load load instr
+5016 009	add i
+400B 00A	store in next memory address
+300B 00B	load ith line
+1800 00C	print
+3016 00D	load i
+5004 00E 	add 1
+4016 00F	store i
+C005 010	loop
+B000 011	
+3016 012	load i
+6016 013	subtract i
+1800 014	print
+0000 015	i
+0000 016	halt

@@ -1,0 +1,5 @@
+//jhf5my -- John Fishbein -- Tuesday January 22 2019
+//lifecycle.questions.txt
+1. I don't understand the implementation of the swapMyObj function. How does it work?
+
+2. What is the "friend" keyword? 

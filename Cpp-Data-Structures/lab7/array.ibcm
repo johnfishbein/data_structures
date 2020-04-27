@@ -1,0 +1,58 @@
+C00A 000  jmp	jump to start address
+0000 001  	extra space
+0022 002  dw	array base address
+0015 003  dw	array size
+0000 004  dw  	incrementer i
+0000 005  dw	current max value
+0000 006  dw    zero
+0001 007  dw	one
+6000 008  dw	subtract instruction
+3000 009  dw	load instruction
+3004 00A  	load i
+6003 00B	i - array size
+D01F 00C	if i - arraysize = 0 jump to exit
+3008 00D	load subtract instr
+5002 00E	add array base address
+5004 00F	add i 
+4012 010	store in 012 instr to subtract a[i]
+3005 011	load current max
+0000 012	execute instr that was built(subtract element at i)
+E015 013	if max - current element < 0 go to 015
+C01B 014	skip next fewstep
+3009 015	load load instruction
+5002 016	add array base
+5004 017	add i
+4019 018	store 019 instr to load a[i] 
+0000 019	execute built in load
+4005 01A	store in max
+3004 01B	load i
+5007 01C	increment i
+4004 01D	store i
+C00A 01E	loop
+3005 01F	load max value
+1800 020	print
+0000 021	halt
+0001 022	array base address (a[0])
+0107 023	a[1]
+0003 024	a[2]
+0005 025	a[3]
+0004 026	a[4]
+0000 027	a[5]
+0000 028	a[6]
+0000 029	a[7]
+0000 02A	a[8]
+0000 02B	a[9]
+0000 02C	a[A] = a[10]
+0000 02D	a[B] = a[11]
+0000 02E	a[C] = a[12]
+0000 02F	a[D] = a[13]
+0000 030	a[E] = a[14]
+0020 031	a[F] = a[15]
+0034 032	a[10] = a[16]
+0038 033	a[11] = a[17]
+0000 034	a[12] = a[18]
+0000 035	a[13] = a[19]
+0052 036	a[14] = a[20]
+0000 037	a[15] = a[21]
+0000 038	a[16] = a[22]
+0000 039
